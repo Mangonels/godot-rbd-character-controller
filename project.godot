@@ -21,7 +21,7 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
@@ -55,6 +55,5 @@ jump={
 
 common/physics_ticks_per_second=120
 3d/physics_engine="Jolt Physics"
-3d/default_gravity=100.0
 jolt_physics_3d/simulation/areas_detect_static_bodies=true
 jolt_3d/collisions/areas_detect_static_bodies=true

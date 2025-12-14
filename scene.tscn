@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dcfo6k3o0rx6h"]
 
-[ext_resource type="Material" uid="uid://d246dff320met" path="res://Materials/Layout/0.TestScene/seamless_grid_green.tres" id="1_8se0a"]
+[ext_resource type="Material" uid="uid://d246dff320met" path="res://materials/layout/0_test_scene/seamless_grid_green.tres" id="1_8se0a"]
 [ext_resource type="PackedScene" uid="uid://db25302gs6hws" path="res://protagonist_overworld.tscn" id="5_m7jmp"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_j5tj1"]

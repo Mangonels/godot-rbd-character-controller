@@ -1,7 +1,7 @@
 class_name ProtagonistMovement_Overworld extends EntityMovement_Overworld
 
 @export var protagonist_data : ProtagonistGlobalData_RES
-var main_camera : Camera3D
+@export var main_camera : Camera3D
 @export var ground_checker : ContactChecker_Groups
 
 # True: Locks all movement,
@@ -11,12 +11,16 @@ var main_camera : Camera3D
 # False: Makes the movement aligned with the world axis
 @export var camera_relative : bool = true
 
+var _grounded_previous_frame = false
+
 # The horizontal movement direction vector.
 # Should always be set normalized, and will usually be set by the ProtagonistLogic_Overworld
 # Used for _physics_process movement calculation and applying
 var horizontal_movement : Vector2 = Vector2.ZERO
 
 func _physics_process(_delta):
+	_on_grounded_ungrounded_checks()
+	
 	horizontal()
 
 ## Moves the protagonist horizontally according to direction, factoring
@@ -88,3 +92,17 @@ func ascend_cut():
 func crouch():
 	if movement_locked:
 		return
+
+func _on_grounded_ungrounded_checks():
+	# Remove feet friction when detaching from ground, 
+	# return friction on landing (could optionally be done gradually)
+	# FIXES: Velocity halt on landing
+	
+	# Just detached from ground check:
+	if(_grounded_previous_frame and not ground_checker.is_contacting()):
+		physics_material_override.set_friction(0.0)
+	# Just landed check:
+	elif(not _grounded_previous_frame and ground_checker.is_contacting()):
+		physics_material_override.set_friction(0.7)
+		
+	_grounded_previous_frame = ground_checker.is_contacting()

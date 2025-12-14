@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp1isv72f6hhk"
-path.s3tc="res://.godot/imported/seamless_grid_green.jpg-b4675b3e20826a51d151fc3ad9faa417.s3tc.ctex"
+path.s3tc="res://.godot/imported/seamless_grid_green.jpg-72d76f80809ea01e6d1837d90c3a5d0c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Materials/Layout/0.TestScene/seamless_grid_green.jpg"
-dest_files=["res://.godot/imported/seamless_grid_green.jpg-b4675b3e20826a51d151fc3ad9faa417.s3tc.ctex"]
+source_file="res://materials/layout/0_test_scene/seamless_grid_green.jpg"
+dest_files=["res://.godot/imported/seamless_grid_green.jpg-72d76f80809ea01e6d1837d90c3a5d0c.s3tc.ctex"]
 
 [params]
 
