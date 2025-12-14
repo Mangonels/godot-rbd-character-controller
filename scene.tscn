@@ -36,6 +36,7 @@ shape = SubResource("BoxShape3D_5qaps")
 transform = Transform3D(1, 0, 0, 0, 0.928477, 0.371391, 0, -0.371391, 0.928477, 0, 5.30787, 8.24013)
 
 [node name="Protagonist_Overworld" parent="." node_paths=PackedStringArray("main_camera") instance=ExtResource("5_m7jmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.583546, 0)
 main_camera = NodePath("../Camera3D")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
