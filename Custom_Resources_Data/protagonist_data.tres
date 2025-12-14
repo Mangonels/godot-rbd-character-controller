@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_ayg70")
-ground_mobility = 5.0
-air_mobility = 4.0
-jump_strength = 1000.0
+ground_mobility = 20.0
+air_mobility = 16.0
+jump_strength = 3000.0
